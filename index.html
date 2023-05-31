@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <title>Encriptado</title>
+		<script type="text/javascript" src="codificar.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Libre+Franklin:wght@100&family=Nunito:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">	
+    </head>
+
+    <body>
+		<header>
+			<h1>Wolf Zero Encriptador</h1>
+		</header>
+		<!--Imagen de encabezado-->
+		<div class="logo">
+			<a href="https://www.aluracursos.com/"><img src="img/logo.png"></a>
+		</div>
+		<!--Mensaje para codificar-->
+		<div class="escribir_msj">
+			<textarea name="encriptar_msj" id="encriptar_msj" cols="80" rows="10"></textarea>
+		</div>
+ 		<div class="traduccion_msj">
+ 			<textarea style="display:none;" id="traducir_msj" cols="80" rows="10" ></textarea>
+		</div> 
+		<!--Botones de accion-->
+		<div class="btn_generales">
+			<button onclick="btn_encriptar();">Encriptar</button>
+			<button onclick="btn_desencriptar();">Desencriptar</button>
+			<button onclick="btn_copiar();">Copiar</button>
+			<button onclick="limpiar();" id="limpiar">Limpiar</button><br>
+		 </div>
+		 <!--pie de paguina-->
+		<footer>
+		<a href="https://www.linkedin.com/in/rafael-victoriano-ponce-5a6ab5225/"><img src="img/linked.png" width="100" height="50"></a>
+		</footer>
+      
+    </body> 
+ </html>
