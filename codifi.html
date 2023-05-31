@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		  <title>Encriptado</title>
+		<script type="text/javascript" src="js/codifica.j"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Libre+Franklin:wght@100&family=Nunito:wght@300&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">	
+		
+    </head>
+
+    <body>
+		<header>
+			<h1>Wolf Zero Encriptador</h1>
+		</header>
+		<!--Imagen de encabezado-->
+		<div class="logo">
+			<a href="https://www.aluracursos.com/"><img src="img/logo.png"></a>
+		</div>
+		<!--Mensaje para codificar-->
+		<div class="escribir_msj">
+			<textarea name="encriptar_msj" id="encriptar_msj" cols="80" rows="10"></textarea>
+		</div>
+ 		<div class="traduccion_msj">
+ 			<textarea style="display:none;" id="traducir_msj" cols="80" rows="10" ></textarea>
+		</div> 
+		<!--Botones de accion-->
+		<div class="btn_generales">
+			<button onclick="btn_encriptar();">Encriptar</button>
+			<button onclick="btn_desencriptar();">Desencriptar</button>
+			<button onclick="btn_copiar();">Copiar</button>
+			<button onclick="limpiar();" id="limpiar">Limpiar</button><br>
+		 </div>
+		 <!--pie de paguina-->
+		<footer>
+		<a href="https://www.linkedin.com/in/rafael-victoriano-ponce-5a6ab5225/"><img src="img/linked.png"></a>
+		</footer>
+      
+  <script>
+  // WEB https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+	var resultado = document.getElementById('traducir_msj'); //limpieza textarea
+	var validar = false; // booleano de vacio
+
+	//-- ENCRIPTAR MENSAJE--
+  function btn_encriptar(){
+  		var encritar = document.getElementById('encriptar_msj').value; // texto a encriptar
+		var p = encritar.split(/\n/g);
+		var html = "";
+		var num_texto = encritar.length;
+		var a = "";
+		var e = "";
+		var i = "";
+		var o = "";
+		var u = "";
+		console.log(num_texto);
+		
+		  if (encritar == validar){
+		   alert("No ha ingresado su mensaje")
+		  }
+		  else{
+	  
+				for (var i = 0; i < p.length; i++) {
+					//html = p[i];
+					//resultado.value = html;
+					//resultado.style.display = "block";
+					if( a = p[i]){
+					var ai = a;
+					}
+					resultado.value = ai;
+					resultado.style.display = "block";
+				
+				}	
+
+			document.getElementById('encriptar_msj').value ="";	
+			alert (num_texto);
+			alert ("Se a encriptador tu mensaje");
+			}
+	}
+	//-- Fin de encriptacion --
+
+	//-- DESENCRIPTAR MENSAJE--
+	function btn_desencriptar(){
+  		var encritar = document.getElementById('traducir_msj').value; // texto a encriptar
+	  if (encritar == validar){
+
+			alert ("No hay mensaje para encriptar");
+		}
+		else{
+		
+		
+		
+		}
+	}
+	//-- COPIAR MENSAJE--
+	function btn_copiar(){
+  		var encritar = document.getElementById('traducir_msj').value; // texto a encriptar
+		 if (encritar == validar){	
+				alert ("No hay mensaje que copiar");
+			}	
+		else{
+			var copiar = document.getElementById('traducir_msj').value;
+			document.getElementById('encriptar_msj').value = copiar;
+			resultado.style.display = "none";
+			alert ("Se a copiado con exito tu mensaje");
+			}
+	}
+	
+	//-- LIMPIAR MENSAJE--
+	function limpiar() {
+	document.getElementById('encriptar_msj').value ="";
+	document.getElementById('traducir_msj').value ="";
+	resultado.value = "";
+	resultado.style.display = "none";
+	alert ("Ha limpado el mensaje correctamente")
+	}	
+
+</script>  
+	
+    </body> 
+ </html>
